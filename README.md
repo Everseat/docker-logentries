@@ -29,6 +29,8 @@ You can pass the `--no-logs` flag if you do not want logs to be published to Log
 You can pass the `--no-dockerEvents` flag if you do not want events to be
 published to Logentries.
 
+You can pass the `-r/--remove` flag follow by the attributes comma separated you don't want being send to the server: `-r id,image`
+
 The `-i/--statsinterval <STATSINTERVAL>` downsamples the logs sent to Logentries. It collects samples and averages them before sending to Logentries.
 
 If you don't use `-a` a default ``host=`uname -n` `` value will be added.
