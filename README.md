@@ -21,7 +21,8 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock \
            logentries/docker-logentries \
            -t <TOKEN> \
            -j \
-           -a host=`uname -n`
+           -a host=`uname -n` \
+           -r id,image
 ```
 
 You can also use different tokens for logging, stats and events:
@@ -34,7 +35,8 @@ docker run -v /var/run/docker.sock:/var/run/docker.sock \
            -k <STATSTOKEN> \
            -e <EVENTSTOKEN> \
            -j \
-           -a host=`uname -n`
+           -a host=`uname -n` \
+           -r id,image
 ```
 
 The `--read-only` docker flag specifies that the container file system will be read-only.
